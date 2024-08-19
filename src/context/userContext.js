@@ -16,7 +16,7 @@ export const UserProvider = ({ children }) => {
   const [balance, setBalance] = useState(0);
   // const [totalBalance, setTotalBalance] = useState(0);
   const [tapBalance, setTapBalance] = useState(0);
-  const [level, setLevel] = useState({ id: 1, name: "Silver Ape Boy", imgUrl: '/Silverapeboy.webp', imgTap: '/coin-1.webp', imgBoost: '/coins-1.webp' }); // Initial level as an object with id and name
+  const [level, setLevel] = useState({ id: 1, name: "Poor", imgUrl: '/coin-1.webp', imgTap: '/coin-1.webp', imgBoost: '/coin-1.webp' }); // Initial level as an object with id and name
   const [tapValue, setTapValue] = useState({level: 1, value: 1});
   const [timeRefill, setTimeRefill] = useState({level: 1, duration: 10, step: 600});
   const [id, setId] = useState("");
@@ -188,7 +188,7 @@ export const UserProvider = ({ children }) => {
           timeStaTank: null,
           tapValue: {level: 1, value: 1},
           timeRefill: {level: 1, duration: 10, step: 600},
-          level: { id: 1, name: "Silver Ape Boy", imgUrl: '/Silverapeboy.webp', imgTap: '/coin-1.webp', imgBoost: '/coins-1.webp' }, // Set the initial level with id and name
+          level: { id: 1, name: "Poor", imgUrl: '/coin-1.webp', imgTap: '/coin-1.webp', imgBoost: '/coin-1.webp' }, // Set the initial level with id and name
           energy: 500,
           battery: {level: 1, energy: 500},
           refereeId: referrerId || null,
@@ -221,7 +221,7 @@ export const UserProvider = ({ children }) => {
                 userId: userId.toString(),
                 username: finalUsername,
                 balance: initialBalance,
-                level: { id: 1, name: "Silver Ape Boy", imgUrl: '/Silverapeboy.webp', imgTap: '/coin-1.webp', imgBoost: '/coins-1.webp' }, // Include level with id and name
+                level: { id: 1, name: "Poor", imgUrl: '/coin-1.webp', imgTap: '/coin-1.webp', imgBoost: '/coin-1.webp' }, // Include level with id and name
               })
             });
             console.log('Referrer updated in Firestore');
@@ -320,28 +320,28 @@ export const UserProvider = ({ children }) => {
   };
 
   const updateUserLevel = async (userId, newTapBalance) => {
-    let newLevel = { id: 1, name: "Silver Ape Boy", imgUrl: "/Silverapeboy.webp", imgTap: "/coin-1.webp", imgBoost: "/coin-1.webp" };
+    let newLevel = { id: 1, name: "Poor", imgUrl: "/coin-1.webp", imgTap: "/coin-1.webp", imgBoost: "/coin-1.webp" };
 
     if (newTapBalance >= 10 && newTapBalance < 5000) {
-      newLevel = { id: 2, name: "Green Ape Boy", imgUrl: "/Greenapeboy.webp", imgTap: "/coin-2.webp", imgBoost: "/coin-2.webp" };
+      newLevel = { id: 2, name: "Low", imgUrl: "/coin-2.webp", imgTap: "/coin-2.webp", imgBoost: "/coin-2.webp" };
     } else if (newTapBalance >= 5000 && newTapBalance < 50000) {
-      newLevel = { id: 3, name: "Golden Ape Boy", imgUrl: "/Goldenapeboy.webp", imgTap: "/coin-3.webp", imgBoost: "/coin-3.webp" };
+      newLevel = { id: 3, name: "Medium", imgUrl: "/coin-3.webp", imgTap: "/coin-3.webp", imgBoost: "/coin-3.webp" };
     } else if (newTapBalance >= 50000 && newTapBalance < 500000) {
-      newLevel = { id: 4, name: "Juvenile Silver Ape", imgUrl: "/juvenilesilverape.webp", imgTap: "/coin-4.webp", imgBoost: "/coin-4.webp" };
+      newLevel = { id: 4, name: "High", imgUrl: "/coin-4.webp", imgTap: "/coin-4.webp", imgBoost: "/coin-4.webp" };
     } else if (newTapBalance >= 500000 && newTapBalance < 1000000) {
-      newLevel = { id: 5, name: "Juvenile Green Ape", imgUrl: "/juvenilegreenape.webp", imgTap: "/coin-5.webp", imgBoost: "/coin-5.webp" };
+      newLevel = { id: 5, name: "Max", imgUrl: "/coin-5.webp", imgTap: "/coin-5.webp", imgBoost: "/coin-5.webp" };
     } else if (newTapBalance >= 1000000 && newTapBalance < 2500000) {
-      newLevel = { id: 6, name: "Juvenile Golden Ape", imgUrl: "/juvenilegoldenape.webp", imgTap: "/coin-6.webp", imgBoost: "/coin-6.webp" };
+      newLevel = { id: 6, name: "Ultra", imgUrl: "/coin-6.webp", imgTap: "/coin-6.webp", imgBoost: "/coin-6.webp" };
     } else if (newTapBalance >= 2500000 && newTapBalance < 5000000) {
-      newLevel = { id: 7, name: "Silver Old Ape", imgUrl: "/silveroldape.webp", imgTap: "/coin-7.webp", imgBoost: "/coin-7.webp" };
+      newLevel = { id: 7, name: "Master", imgUrl: "/coin-7.webp", imgTap: "/coin-7.webp", imgBoost: "/coin-7.webp" };
     } else if (newTapBalance >= 5000000 && newTapBalance < 10000000) {
-      newLevel = { id: 8, name: "Green Old Ape", imgUrl: "/greenoldape.webp", imgTap: "/coin-8.webp", imgBoost: "/coin-8.webp" };
+      newLevel = { id: 8, name: "Grand Master", imgUrl: "/coin8.webp", imgTap: "/coin-8.webp", imgBoost: "/coin-8.webp" };
     } else if (newTapBalance >= 10000000 && newTapBalance < 25000000) {
-      newLevel = { id: 9, name: "Golden Old Ape", imgUrl: "/goldenoldape.webp", imgTap: "/coin-9.webp", imgBoost: "/coin-9.webp" };
+      newLevel = { id: 9, name: "Epic", imgUrl: "/coin-9.webp", imgTap: "/coin-9.webp", imgBoost: "/coin-9.webp" };
     } else if (newTapBalance >= 25000000 && newTapBalance < 50000000) {
-      newLevel = { id: 10, name: "Silver King Ape", imgUrl: "/silverkingape.webp", imgTap: "/coin-10.webp", imgBoost: "/coin-10.webp" };
+      newLevel = { id: 10, name: "King", imgUrl: "/coin-10.webp", imgTap: "/coin-10.webp", imgBoost: "/coin-10.webp" };
     } else if (newTapBalance >= 50000000) {
-      newLevel = { id: 11, name: "Golden King Ape", imgUrl: "/goldenkingape.webp", imgTap: "/coin-11.webp", imgBoost: "/coin-11.webp" };
+      newLevel = { id: 11, name: "Lord", imgUrl: "/coin-11.webp", imgTap: "/coin-11.webp", imgBoost: "/coin-11.webp" };
     }
     
 
