@@ -3,12 +3,12 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCssFBeOEa2JHUbxM3IAaZv9K3c3bktXfA",
-  authDomain: "apecomtest.firebaseapp.com",
-  projectId: "apecomtest",
-  storageBucket: "apecomtest.appspot.com",
-  messagingSenderId: "613346686609",
-  appId: "1:613346686609:web:c8e9e8bbd56edf0c403130"
+  apiKey: "AIzaSyDET-60uDu5bm7BFFsBJO8AjMI2h832oVY",
+  authDomain: "cuan-test-357e5.firebaseapp.com",
+  projectId: "cuan-test-357e5",
+  storageBucket: "cuan-test-357e5.appspot.com",
+  messagingSenderId: "413998882799",
+  appId: "1:413998882799:web:01c9c369e56b4b32c8201a"
 
 };
 
