@@ -1,10 +1,10 @@
 const { Telegraf } = require("telegraf");
-const TOKEN = "7091294846:AAE6GIm2_YsHjqjYBAWhe8hwIDRw5aa47Qs";
+const TOKEN = "6993198265:AAFrTfhQHEYpZx5c49ot3piSs2msOPttq7o";
 const bot = new Telegraf(TOKEN);
 
-const web_link = "https://apecomtest12.vercel.app";
-const community_link = "https://t.me/geto_spirit_announcement"; 
-const how_to_earn = `How to play Geto Spirit 🤑
+const web_link = "https://cuan12.vercel.app";
+const community_link = "cuanswap"; 
+const how_to_earn = `How to play Cuanswap game 🤑
 
 💰 Tap to earn
 Tap the screen and collect coins.
