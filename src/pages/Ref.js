@@ -16,9 +16,9 @@ const Ref = () => {
  
   const copyToClipboard = () => {
 
-   const reflink = `https://t.me/Apecommercetestbot?start=r${id}
+   const reflink = `https://t.me/Cuanswapgame_bot?start=r${id}
 Play with me, and get free token airdrop! 
-Tap Apecom for more coin and invite friends… 
+Tap Cuan for more coin and invite friends… 
 More friends more coin!!
 🪙+25k Coins as a first-time gift
 🔥+25k Coins for referral`
@@ -90,7 +90,7 @@ More friends more coin!!
               </span>
             </span>
             <div className="text-[#9a96a6] text-[13px]">
-            https://t.me/Apecommercetestbot?start=r{id}
+            https://t.me/Cuanswapgame_bot?start=r{id}
             </div>
           </div>
           <div className="bg-borders w-full px-5 h-[1px] !mt-6"></div>
