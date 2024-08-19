@@ -4,17 +4,17 @@ import { useUser } from '../context/userContext';
 
 
 const userLevels = [
-    { name: 'Silver Ape Boy', icon: '/Silverapeboy.webp', tapBalanceRequired: 10 },
-    { name: 'Green Ape Boy', icon: '/Greenapeboy.webp', tapBalanceRequired: 5000 },
-    { name: 'Golden Ape Boy', icon: '/Goldenapeboy.webp', tapBalanceRequired: 50000 },
-    { name: 'Juvenile Silver Ape', icon: '/juvenilesilverape.webp', tapBalanceRequired: 500000 },
-    { name: 'Juvenile Green Ape', icon: '/juvenilegreenape.webp', tapBalanceRequired: 1000000 },
-    { name: 'Juvenile Golden Ape', icon: '/juvenilegoldenape.webp', tapBalanceRequired: 2500000 },
-    { name: 'Silver Old Ape', icon: '/silveroldape.webp', tapBalanceRequired: 5000000 },
-    { name: 'Green Old Ape', icon: '/greenoldape.webp', tapBalanceRequired: 10000000 },
-    { name: 'Golden Old Ape', icon: '/goldenoldape.webp', tapBalanceRequired: 25000000 },
-    { name: 'Silver King Ape', icon: '/silverkingape.webp', tapBalanceRequired: 50000000 },
-    { name: 'Golden King Ape', icon: '/goldenkingape.webp', tapBalanceRequired: 100000000 },
+    { name: 'Poor', icon: '/coin-1.webp', tapBalanceRequired: 10 },
+    { name: 'Low', icon: '/coin-2.webp', tapBalanceRequired: 5000 },
+    { name: 'Medium', icon: '/coin-3.webp', tapBalanceRequired: 50000 },
+    { name: 'High', icon: '/coin-4.webp', tapBalanceRequired: 500000 },
+    { name: 'Max', icon: '/coin-5.webp', tapBalanceRequired: 1000000 },
+    { name: 'Ultra', icon: '/coin-6.webp', tapBalanceRequired: 2500000 },
+    { name: 'Master', icon: '/coin-7.webp', tapBalanceRequired: 5000000 },
+    { name: 'Grand Master', icon: '/coin-8.webp', tapBalanceRequired: 10000000 },
+    { name: 'Epic', icon: '/coin-9.webp', tapBalanceRequired: 25000000 },
+    { name: 'King', icon: '/coin-10.webp', tapBalanceRequired: 50000000 },
+    { name: 'Lord', icon: '/coin-11.webp', tapBalanceRequired: 100000000 },
   ];
   
   
