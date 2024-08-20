@@ -1,4 +1,53 @@
+import React, { createContext, useContext, useState, useEffect, useRef, useCallback } from 'react';
+import { doc, getDoc, setDoc, updateDoc, arrayUnion, getDocs, collection } from 'firebase/firestore';
+import { db } from '../firebase'; // Adjust the path as needed
+import { disableReactDevTools } from '@fvilers/disable-react-devtools';
 
+
+if (process.env.NODE_ENV === 'production') {
+  disableReactDevTools();
+}
+
+const UserContext = createContext();
+
+export const useUser = () => useContext(UserContext);
+
+export const UserProvider = ({ children }) => {
+  const [balance, setBalance] = useState(0);
+  // const [totalBalance, setTotalBalance] = useState(0);
+  const [tapBalance, setTapBalance] = useState(0);
+  const [level, setLevel] = useState({ id: 1, name: "Poor", imgUrl: '/coin-1.webp', imgTap: '/coin-1.webp', imgBoost: '/coin-1.webp' }); // Initial level as an object with id and name
+  const [tapValue, setTapValue] = useState({level: 1, value: 1});
+  const [timeRefill, setTimeRefill] = useState({level: 1, duration: 10, step: 600});
+  const [id, setId] = useState("");
+  const [loading, setLoading] = useState(true);
+  const [energy, setEnergy] = useState(500);
+  const [battery, setBattery] = useState({level: 1, energy: 500});
+  const [initialized, setInitialized] = useState(false);
+  const [refBonus, SetRefBonus] = useState(0);
+  const [manualTasks, setManualTasks] = useState([]);
+  const [userManualTasks, setUserManualTasks] = useState([]);
+  const [tasks, setTasks] = useState([]);
+  const [completedTasks, setCompletedTasks] = useState([]); // State to hold completed tasks
+  const [claimedMilestones, setClaimedMilestones] = useState([]);
+  const [claimedWatch, setClaimedWatch] = useState([]);
+  const [address, setAddress] = useState([]);
+  const [claimedReferralRewards, setClaimedReferralRewards] = useState([]);
+  const [referrals, setReferrals] = useState([]); // State to hold referrals
+  const telegramUser = window.Telegram.WebApp.initDataUnsafe?.user;
+  const [refiller, setRefiller] = useState(0);
+  const { count, setCount } = useState(0);
+  const [tapGuru, setTapGuru] = useState(false);
+  const [mainTap, setMainTap] = useState(true);
+  const [time, setTime] = useState(22);
+  const [isTimerRunning, setIsTimerRunning] = useState(false);
+  const [freeGuru, setFreeGuru] = useState(3);
+  const [fullTank, setFullTank] = useState(3);
+  const [timeSta, setTimeSta] = useState(null);
+  const [timeStaTank, setTimeStaTank] = useState(null);
+  const [username, setUsername] = useState("");
+  const [name, setName] = useState("");
+  const [smallname, setSmallName] = useState("");
   // eslint-disable-next-line
   const [idme, setIdme] = useState("");
   const [totalCount, setTotalCount] = useState(0);
